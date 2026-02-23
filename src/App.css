@@ -1,0 +1,190 @@
+:root {
+  --primary-color: #166534;
+  --primary-hover: #166534;
+  --bg-color: #064e3b;
+  --card-bg: #ffffff;
+  --text-main: #14532d;
+  --text-secondary: #166534;
+  --border-color: #bbf7d0;
+  --shadow-color: rgba(21, 128, 61, 0.1);
+  --text-inverse: #f0fdf4;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-inverse);
+}
+
+/* --- Estilos Base (Móvil) --- */
+.app-container {
+  width: 100%;
+  flex-grow: 1;
+  /* Ocupa el espacio disponible */
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.cover-container {
+  height: 200px;
+  width: 100%;
+  background-color: #cbd5e1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.profile-section {
+  padding: 0 24px 40px;
+  margin-top: -60px;
+  /* Superpone la imagen de perfil a la portada */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--card-bg);
+  object-fit: cover;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.profile-name {
+  margin-top: 16px;
+  margin-bottom: 0px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-inverse);
+}
+
+.profile-role {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-inverse);
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.links-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 0px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px var(--shadow-color);
+  border-color: var(--primary-color);
+  background-color: #f0fdf4;
+  color: var(--primary-color);
+}
+
+.link-card:active {
+  transform: scale(0.98);
+}
+
+.link-icon {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  object-fit: contain;
+}
+
+.footer {
+  margin-top: 25px;
+  font-size: 0.875rem;
+  color: var(--text-inverse);
+  opacity: 0.6;
+  font-weight: 500;
+}
+
+.loading-screen,
+.error-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  /* color: var(--text-inverse); */
+  text-align: center;
+  padding: 20px;
+  background-color: var(--bg-color);
+}
+
+/* --- Estilos Escritorio (Desktop) --- */
+@media (min-width: 640px) {
+  body {
+    /* Fondo degradado bonito para escritorio */
+    background-image: linear-gradient(to bottom right, #064e3b, #065f46);
+    /* Centrar todo el contenido en la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #root {
+    /* Permitir que el root se comporte como contenedor flex centrado */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .app-container {
+    /* Convertir la app en una "tarjeta" */
+    max-width: 480px;
+    min-height: auto;
+    /* Ya no forzamos 100vh en la tarjeta */
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    flex-grow: 0;
+    /* No expandir */
+    color: var(--text-main);
+  }
+
+  .profile-name {
+    color: var(--text-main);
+  }
+
+  .profile-role {
+    color: var(--text-secondary);
+  }
+
+  .footer {
+    color: var(--text-secondary);
+  }
+}
