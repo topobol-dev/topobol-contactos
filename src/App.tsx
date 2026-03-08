@@ -152,7 +152,7 @@ function App() {
         </div>
 
         <footer className="footer">
-          <a href="">TopoBol</a>
+          <a href="">{new Date().getFullYear()}</a>
         </footer>
       </div>
     </div>
