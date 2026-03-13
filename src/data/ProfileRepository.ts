@@ -1,6 +1,6 @@
 import type { Profile } from '../domain/Profile';
 
-const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRvLQvnsB7CvEZkHfwJ6UrBvblMkYulyJHZ2-C62_6yiFab-ah7111GowgtrZWKFc4ph-7YPQhNufvB/pub?output=csv';
+const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSBfSHaivrVk2Xii13KjsfpYb5dMKviN9r3TeLHStjjLmaS0Ezsfh-wJQ57d8ZjO6hc_CCSf-JusKHc/pub?output=csv';
 
 export const fetchAllProfiles = async (): Promise<Profile[]> => {
     try {
