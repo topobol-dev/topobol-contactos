@@ -11,7 +11,7 @@ function App() {
     let title = "TOPOBOL - Agricultura de Precisión y Ganadería en Bolivia";
     let description = "TOPOBOL: líder en agricultura de precisión en Bolivia. Venta de tractores, maquinaria e insumos para ganadería y agronomía. / TOPOBOL: Leader in precision agriculture in Bolivia. Sales of tractors, machinery, and supplies for livestock and agronomy.";
     // Fallback image if no profile image is available (replace with a real hosted URL if possible)
-    let image = "https://topobol.com/logo.png";
+    let image = "https://cuaxsqqtaggqavqsudrd.supabase.co/storage/v1/object/public/imagenes/LOGO%20NEGRO.png";
 
     if (!loading && !notFound && profile) {
       title = `${profile.nombre} | TOPOBOL`;
