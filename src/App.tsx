@@ -8,14 +8,14 @@ function App() {
 
   // SEO / SEA Management (Search Engine Optimization / Advertising)
   useEffect(() => {
-    let title = "Topobol - Soluciones Agrícolas / Agronomy Solutions";
-    let description = "Topobol: Venta de tractores y soluciones para agrónomos en Bolivia. / Topobol: Tractors and solutions for agronomists in Bolivia.";
+    let title = "TOPOBOL - Agricultura de Precisión y Ganadería en Bolivia";
+    let description = "TOPOBOL: líder en agricultura de precisión en Bolivia. Venta de tractores, maquinaria e insumos para ganadería y agronomía. / TOPOBOL: Leader in precision agriculture in Bolivia. Sales of tractors, machinery, and supplies for livestock and agronomy.";
     // Fallback image if no profile image is available (replace with a real hosted URL if possible)
     let image = "https://topobol.com/logo.png";
 
     if (!loading && !notFound && profile) {
-      title = `${profile.nombre} | Topobol`;
-      description = `Contacta a ${profile.nombre}. Topobol ofrece tractores y soluciones para agrónomos en Bolivia. / Contact ${profile.nombre}. Topobol offers tractors and solutions for agronomists in Bolivia.`;
+      title = `${profile.nombre} | TOPOBOL`;
+      description = `Contacta a ${profile.nombre} de TOPOBOL para soluciones en agricultura de precisión y ganadería en Bolivia. / Contact ${profile.nombre} from TOPOBOL for solutions in precision agriculture and livestock in Bolivia.`;
 
       if (profile.imagen) {
         image = profile.imagen;
@@ -23,7 +23,7 @@ function App() {
         image = profile.portada;
       }
     } else if (notFound) {
-      title = "Perfil no encontrado / Profile Not Found | Topobol";
+      title = "Perfil no encontrado / Profile Not Found | TOPOBOL";
     }
 
     // Update Title
@@ -32,13 +32,13 @@ function App() {
     // Update Meta Tags
     const metaTags = [
       { name: 'description', content: description },
-      { name: 'keywords', content: 'Topobol, Bolivia, tractores, tractors, agronomía, agronomy, agricultura, agriculture, maquinaria, machinery, LinkTree' },
+      { name: 'keywords', content: 'Topobol, Bolivia, agricultura de precisión, ganadería, tractores, maquinaria agrícola, insumos para ganadería, agronomía, drones agrícolas, mapeo de cultivos, fertilizantes, precision agriculture, livestock, tractors, agricultural machinery, livestock supplies, agronomy, agricultural drones, crop mapping, fertilizers, LinkTree' },
       // Open Graph / Facebook
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
       { property: 'og:image', content: image },
       { property: 'og:type', content: 'profile' },
-      { property: 'og:site_name', content: 'Topobol' },
+      { property: 'og:site_name', content: 'TOPOBOL' },
       { property: 'og:locale', content: 'es_BO' },
       { property: 'og:locale:alternate', content: 'en_US' },
       // Twitter
