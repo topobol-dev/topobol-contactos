@@ -151,8 +151,8 @@ function App() {
           )}
         </div>
 
-        <footer className="footer">
-          <a href="">{new Date().getFullYear()}</a>
+        <footer className="footer" style={{ opacity: 1 }}>
+          <img src="/topobol_blanco.png" alt="Topobol" style={{ height: '40px' }} />
         </footer>
       </div>
     </div>
