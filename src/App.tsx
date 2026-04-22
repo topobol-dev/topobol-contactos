@@ -151,7 +151,7 @@ function App() {
           )}
         </div>
 
-        <footer className="footer" style={{ opacity: 1 }}>
+        <footer className="footer" style={{ opacity: 1, backgroundColor: '#064e3b', padding: '10px', borderRadius: '8px', marginTop: '20px' }}>
           <img src="/topobol_blanco.png" alt="Topobol" style={{ height: '40px' }} />
         </footer>
       </div>
